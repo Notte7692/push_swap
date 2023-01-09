@@ -55,3 +55,8 @@ int	arg_is_zero(char *str)
 	else
 		return (0);
 }
+
+int	ft_atoi(char *num);
+{
+	
+}

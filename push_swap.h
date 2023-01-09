@@ -6,7 +6,7 @@
 /*   By: nsalhi <<marvin@42.fr>>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 16:49:10 by nsalhi            #+#    #+#             */
-/*   Updated: 2023/01/08 18:53:07 by nsalhi           ###   ########.fr       */
+/*   Updated: 2023/01/09 10:15:43 by nsalhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,20 @@
 # define PUSH_SWAP_H
 
 # include <stdio.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <limits.h>
+
+typedef struct s_stack{
+	int	value;
+	int	index;
+	int	pos;
+	int	target_pos;
+	int	cost_a;
+	int	cost_b;
+	
+	struct s_stack *next;
+} t_stack;
 
 int	is_digit(char c);
 int	is_sign(char c);

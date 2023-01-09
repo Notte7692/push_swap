@@ -6,7 +6,7 @@
 /*   By: nsalhi <<marvin@42.fr>>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 17:19:34 by nsalhi            #+#    #+#             */
-/*   Updated: 2023/01/08 18:59:09 by nsalhi           ###   ########.fr       */
+/*   Updated: 2023/01/09 10:12:35 by nsalhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,17 +73,4 @@ int	arg_is_valid(char **av)
 	if (is_duplicate(av))
 		return (0);
 	return (1);
-}
-
-int	main(int ac, char **av)
-{
-	int	i;
-
-	i = 1;
-	while (i < ac)
-	{
-		printf("%d", arg_is_valid(av));
-		i++;
-	}
-	return (0);
 }
