@@ -6,7 +6,7 @@
 /*   By: nsalhi <<marvin@42.fr>>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 17:20:10 by nsalhi            #+#    #+#             */
-/*   Updated: 2023/01/07 18:19:24 by nsalhi           ###   ########.fr       */
+/*   Updated: 2023/01/08 20:33:23 by nsalhi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ int	arg_is_zero(char *str)
 	while (str[i] == '0')
 		i++;
 	if (str[i] == '\0')
-		return (1);
-	else
 		return (0);
+	else
+		return (1);
 }
 
 int	ft_atoi(char *num);

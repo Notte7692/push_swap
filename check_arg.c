@@ -6,7 +6,11 @@
 /*   By: nsalhi <<marvin@42.fr>>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 17:19:34 by nsalhi            #+#    #+#             */
+<<<<<<< HEAD
+/*   Updated: 2023/01/08 20:36:24 by nsalhi           ###   ########.fr       */
+=======
 /*   Updated: 2023/01/09 10:12:35 by nsalhi           ###   ########.fr       */
+>>>>>>> refs/remotes/origin/main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,13 +68,13 @@ int	arg_is_valid(char **av)
 	{
 		if (!is_number(av[i]))
 			return (0);
-		if (arg_is_zero(av[i]) == 1)
+		if (arg_is_zero(av[i]) == 0)
 			nb_zero += 1;
 		i++;
 	}
 	if (nb_zero > 1)
 		return (0);
-	if (is_duplicate(av))
+	if (is_duplicate(av) == 1)
 		return (0);
 	return (1);
 }
