@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsalhi <<marvin@42.fr>>                    +#+  +:+       +#+        */
+/*   By: nassimsalhi <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 18:10:40 by nsalhi            #+#    #+#             */
-/*   Updated: 2023/01/13 18:09:09 by nassimsalhi      ###   ########.fr       */
+/*   Created: 2023/01/23 10:37:19 by nassimsalhi       #+#    #+#             */
+/*   Updated: 2023/01/23 11:01:30 by nassimsalhi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate(t_stack **stack)
+/*
+ rReverse-rotate the stack the last lement is sent to the top
+ */
+static void	rev_rotate(t_stack **stack)
 {
 	t_stack	*tmp;
 	t_stack	*tail;
@@ -28,19 +31,19 @@ void	reverse_rotate(t_stack **stack)
 
 void	do_rra(t_stack **stack_a)
 {
-	reverse_rotate(stack_a);
-	write(1, "rra\n", 4);
+	rev_rotate(stack_a);
+	ft_putstr("rra\n");
 }
 
 void	do_rrb(t_stack **stack_b)
 {
-	reverse_rotate(stack_b);
-	write(1, "rrb\n", 4);
+	rev_rotate(stack_b);
+	ft_putstr("rrb\n");
 }
 
 void	do_rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	reverse_rotate(stack_a);
-	reverse_rotate(stack_b);
-	write(1, "rrr\n", 4);
+	rev_rotate(stack_a);
+	rev_rotate(stack_b);
+	ft_putstr("rrr\n");
 }

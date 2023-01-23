@@ -3,42 +3,45 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nsalhi <<marvin@42.fr>>                    +#+  +:+       +#+        */
+/*   By: nassimsalhi <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 15:16:52 by nsalhi            #+#    #+#             */
-/*   Updated: 2023/01/13 18:10:11 by nassimsalhi      ###   ########.fr       */
+/*   Created: 2023/01/23 10:38:43 by nassimsalhi       #+#    #+#             */
+/*   Updated: 2023/01/23 11:03:34 by nassimsalhi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
+ Rotate the stack the first element is sent to the botom
+ */
 static void	rotate(t_stack **stack)
 {
-    t_stack    *tmp;
-    t_stack    *tail;
+	t_stack	*tmp;
+	t_stack	*tail;
 
-    tmp = *stack;
-    *stack = (*stack)->next;
-    tail = get_stack_bottom(*stack);
-    tmp->next = NULL;
-    tail->next = tmp;
+	tmp = *stack;
+	*stack = (*stack)->next;
+	tail = get_stack_bottom(*stack);
+	tmp->next = NULL;
+	tail->next = tmp;
 }
 
 void	do_ra(t_stack **stack_a)
 {
 	rotate(stack_a);
-	write (1, "ra\n", 3);
+	ft_putstr("ra\n");
 }
 
 void	do_rb(t_stack **stack_b)
 {
 	rotate(stack_b);
-	write (1, "rb\n", 3);
+	ft_putstr("rb\n");
 }
 
 void	do_rr(t_stack **stack_a, t_stack **stack_b)
 {
 	rotate(stack_a);
 	rotate(stack_b);
-	write (1, "rr\n", 3);
+	ft_putstr("rr\n");
 }
