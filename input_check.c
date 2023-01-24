@@ -6,7 +6,7 @@
 /*   By: nassimsalhi <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:20:40 by nassimsalhi       #+#    #+#             */
-/*   Updated: 2023/01/23 10:25:50 by nassimsalhi      ###   ########.fr       */
+/*   Updated: 2023/01/24 14:33:40 by nassimsalhi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ static int	have_duplicates(char **av)
 	int	i;
 	int	j;
 
-	i = 1;
+	i = 0;
 	while (av[i])
 	{
-		j = 1;
+		j = 0;
 		while (av[j])
 		{
 			if (j != i && ft_cmp(av[i], av[j]) == 0)
@@ -81,7 +81,7 @@ int	is_correct_input(char **av)
 	int	nb_zero;
 
 	nb_zero = 0;
-	i = 1;
+	i = 0;
 	while (av[i])
 	{
 		if (!arg_is_number(av[i]))

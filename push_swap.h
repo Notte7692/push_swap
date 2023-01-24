@@ -6,7 +6,7 @@
 /*   By: nassimsalhi <marvin@42.fr>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 10:49:19 by nassimsalhi       #+#    #+#             */
-/*   Updated: 2023/01/23 10:59:21 by nassimsalhi      ###   ########.fr       */
+/*   Updated: 2023/01/24 14:31:59 by nassimsalhi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,5 +74,9 @@ int			is_correct_input(char **av);
 int			is_digit(char c);
 int			is_sign(char c);
 int			ft_cmp(const char *s1, const char *s2);
+
+char		**ft_split(const char *s, char c);
+
+size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 #endif

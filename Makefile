@@ -28,6 +28,8 @@ SRC = input_check_utils.c \
 	sort.c \
 	input_check.c \
 	sort_three.c \
+	ft_split.c \
+	strlcpy.c \
 
 CFLAGS += -Werror -Wextra -Wall -g
 
