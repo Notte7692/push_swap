@@ -27,7 +27,7 @@ int	is_sign(char c)
  + is ignored as +x = x;
  return (0) if the string are the same
  */
-int	nbstr_cmp(const char *s1, const char *s2)
+int	ft_cmp(const char *s1, const char *s2)
 {
 	int	i;
 	int	j;

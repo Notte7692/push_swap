@@ -18,15 +18,15 @@
 static void	rev_rotate(t_stack **stack)
 {
 	t_stack	*tmp;
-	t_stack	*tail;
-	t_stack	*before_tail;
+	t_stack	*bottom;
+	t_stack	*before_bottom;
 
-	tail = get_stack_bottom(*stack);
-	before_tail = get_stack_before_bottom(*stack);
+	bottom = get_stack_bottom(*stack);
+	before_bottom = get_stack_before_bottom(*stack);
 	tmp = *stack;
-	*stack = tail;
+	*stack = bottom;
 	(*stack)->next = tmp;
-	before_tail->next = NULL;
+	before_bottom->next = NULL;
 }
 
 void	do_rra(t_stack **stack_a)

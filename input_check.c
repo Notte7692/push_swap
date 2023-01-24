@@ -44,7 +44,7 @@ static int	have_duplicates(char **av)
 		j = 1;
 		while (av[j])
 		{
-			if (j != i && nbstr_cmp(av[i], av[j]) == 0)
+			if (j != i && ft_cmp(av[i], av[j]) == 0)
 				return (1);
 			j++;
 		}
