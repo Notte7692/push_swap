@@ -13,7 +13,7 @@
 #include "push_swap.h"
 
 /*
- rReverse-rotate the stack the last lement is sent to the top
+ Reverse-rotate the stack the last lement is sent to the top
  */
 static void	rev_rotate(t_stack **stack)
 {

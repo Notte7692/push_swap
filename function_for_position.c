@@ -65,28 +65,28 @@ int	get_lowest_index_position(t_stack **stack)
  the lowest indes and assign it's position as the target position.
  */
 static int	get_target(t_stack **a, int b_idx,
-						int target_idx, int target_pos)
+						int target_index, int target_pos)
 {
 	t_stack	*tmp_a;
 
 	tmp_a = *a;
 	while (tmp_a)
 	{
-		if (tmp_a->index > b_idx && tmp_a->index < target_idx)
+		if (tmp_a->index > b_idx && tmp_a->index < target_index)
 		{
-			target_idx = tmp_a->index;
+			target_index = tmp_a->index;
 			target_pos = tmp_a->pos;
 		}
 		tmp_a = tmp_a->next;
 	}
-	if (target_idx != INT_MAX)
+	if (target_index != INT_MAX)
 		return (target_pos);
 	tmp_a = *a;
 	while (tmp_a)
 	{
-		if (tmp_a->index < target_idx)
+		if (tmp_a->index < target_index)
 		{
-			target_idx = tmp_a->index;
+			target_index = tmp_a->index;
 			target_pos = tmp_a->pos;
 		}
 		tmp_a = tmp_a->next;

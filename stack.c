@@ -57,7 +57,7 @@ t_stack	*stack_new(int value)
  */
 void	stack_add_bottom(t_stack **stack, t_stack *new)
 {
-	t_stack	*tail;
+	t_stack	*bottom;
 
 	if (!new)
 		return ;
@@ -66,8 +66,8 @@ void	stack_add_bottom(t_stack **stack, t_stack *new)
 		*stack = new;
 		return ;
 	}
-	tail = get_stack_bottom(*stack);
-	tail->next = new;
+	bottom = get_stack_bottom(*stack);
+	bottom->next = new;
 }
 
 /*
